@@ -1,4 +1,4 @@
-#Raising the dead - Undeleting files in ext4
+# Raising the dead - Undeleting files in ext4
 
 The first thing you should do is to figure out what you are up against. What is the OS you are running on that specific machine? What filesystem are you using?
 
@@ -11,14 +11,14 @@ After you are done with gathering this information, shutdown the machine.
 This will ensure nothing will overwrite the files you just deleted, and it will thus increase the probability of a 
 successful recovery.
 
-##Get the right tools
+## Get the right tools
 Given the situation, your best option is to boot the machine using a live CD. 
 I recommend using BackTrack, which comes bundled with a few useful forensics tools.
 
 In my particular case the filesystem I was using was ext4. This meant that my only option was to 
 run extundelete (conveniently bundled into backtrack).
 
-##Convenience setup
+## Convenience setup
 After burning the ISO (or using a bootable usb pen), boot your computer into BackTrack.
 
 For rack-mountable servers that you have no easy access to, I recommend enabling remote ssh:
@@ -30,7 +30,7 @@ passwd root
 ```
 These commands will allow you to ssh remotely into the BackTrack liveCD.
 
-##LVM Partition?!
+## LVM Partition?!
 If your partition is a LVM Partition, these are the steps you will need to execute to be able to successfully mount it:
 ```
 sudo apt-get install lvm2
