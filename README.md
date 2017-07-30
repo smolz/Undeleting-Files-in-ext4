@@ -41,7 +41,7 @@ sudo lvs
 sudo mkdir /mnt/thisblows
 sudo mount /dev/VOLGROUP/VOLUME_NAME /mnt/thisblows -o ro,user
 ```
-##Actually undeleting stuff
+## Actually undeleting stuff
 After everything is mounted you can now run extundelete:
 
 `extundelete /dev/mapper/VOLUME_NAME --restore-all`
